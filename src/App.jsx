@@ -15,7 +15,7 @@ import { UserRole } from './types';
 import { Loader2 } from 'lucide-react';
 
 // Protected Route Component
-const ProtectedRoute: React.FC<{ children: React.ReactNode; role?: UserRole }> = ({ children, role }) => {
+const ProtectedRoute = ({ children, role }) => {
   const { user, isAuthenticated, isLoading } = useAuth();
 
   // Show loading spinner while checking auth to prevent wrong redirects
